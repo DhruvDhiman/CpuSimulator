@@ -70,5 +70,12 @@ public class MyCpuCore extends CpuCore<GlobalData> {
     public void runProgram() {
         // Call advanceClock() in a loop until an error occurs or the HALT
         // instruction is executed.
+    	int i=0;
+    	for(i=0;i<100;i++)
+    	{
+    	advanceClock(); 
+    	}// How can we directly call this method here with out making object or calling from name of class.
+    	
+    	
     }
 }

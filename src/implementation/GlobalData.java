@@ -21,6 +21,9 @@ public class GlobalData implements IGlobals {
     public int program_counter = 0;
     public int[] register_file = new int[32];
     public boolean[] register_invalid = new boolean[32];
+    
+    
+    public int [] memory = new int [32];
 
     @Override
     public void reset() {
@@ -30,5 +33,5 @@ public class GlobalData implements IGlobals {
     
     
     // Other global and shared variables here....
-
+    
 }

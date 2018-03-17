@@ -100,6 +100,8 @@ public abstract class PipelineStageBase<IRT extends LatchBase, ORT extends Latch
         // Allocate a new latch to hold the output of this pipeline stage,
         // which is then passed to the succeeding pipeline register.
         ORT output = output_reg.newLatch();
+
+        //System.out.println("inhvhv : ");
         
         // Call the compute method for this pipeline stage.
         compute(input, output);
@@ -122,7 +124,7 @@ public abstract class PipelineStageBase<IRT extends LatchBase, ORT extends Latch
     /**
      * This method must be overridden to implement the logic of a pipeline
      * stage.
-     * @param input -- data from pervious pipeline stage
+     * @param input -- data from previous pipeline stage
      * @param output -- data to next pipeline stage
      */
     public abstract void compute(IRT input, ORT output);

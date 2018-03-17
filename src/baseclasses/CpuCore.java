@@ -46,7 +46,8 @@ public abstract class CpuCore<GlobalsType extends IGlobals> implements ICpuCore<
      * Step the CPU by one clock cycle.
      */
     @Override
-    public void advanceClock() {        
+    public void advanceClock() {  
+    	
         // Tell all states to compute their outputs from their inputs.
         // Note that this is why compute() must be idempotent.  This is
         // called every cycle regardless of stall condition.  This is necessary

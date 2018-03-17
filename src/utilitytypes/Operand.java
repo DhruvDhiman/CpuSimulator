@@ -29,7 +29,7 @@ public class Operand {
         return s;
     }
     
-    /**
+    /*
      * Creates a new operand with a constant value.
      * 
      * @param value

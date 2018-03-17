@@ -11,7 +11,7 @@
 ; Initialize list of numbers
     movc r1, 0              ; Load R1 with zero
 init_list:
-    store r1, r1            ; Store the value of R1 in memory location R1
+    store r1, r2 1           ; Store the value of R1 in memory location R1
     add r1, r1, 1           ; Increment R1
     cmp r2, r1, r10         ; Compare R1 to R10, put comparison code in R2
     bra lt, r2, init_list   ; Loop if counter < 100

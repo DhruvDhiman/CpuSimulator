@@ -16,14 +16,14 @@ public enum EnumOpcode {
     /* 
     Opcode meanings are as follows:
     
-    ADD - add two registers
-    SUB - subtract
-    AND - bitwise AND
-    OR  - bitwise OR
-    SHL - logical shift left (inserts zeros on the right)
-    ASR - arithmetic shift right (replicates sign bit)
-    LSR - logical shift right (inserts zeros on the left)
-    XOR - bitwise exclusive OR
+    ADD - add two registers--
+    SUB - subtract--
+    AND - bitwise AND--
+    OR  - bitwise OR--
+    SHL - logical shift left (inserts zeros on the right)-- 
+    ASR - arithmetic shift right (replicates sign bit)--
+    LSR - logical shift right (inserts zeros on the left)--
+    XOR - bitwise exclusive OR--
     CMP - subtract two registers, put comparison flags into destination reg
     ROL - rotate left
     ROR - rotate right
@@ -80,7 +80,7 @@ public enum EnumOpcode {
         return writebackSet.contains(op);
     }
 
-    /**
+    /*
      * Is the first operand actually a source for the given opcode? 
      * (Instead of being the the destination as is the case for most
      * instructions.)

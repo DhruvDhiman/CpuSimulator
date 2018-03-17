@@ -5,6 +5,8 @@
  */
 package implementation;
 
+import com.sun.corba.se.spi.orbutil.fsm.Input;
+
 import baseclasses.InstructionBase;
 import baseclasses.LatchBase;
 
@@ -23,20 +25,28 @@ import baseclasses.LatchBase;
 public class AllMyLatches {
     public static class FetchToDecode extends LatchBase {
         // LatchBase already includes a field for the instruction.
+    	@Override
+    	public InstructionBase getInstruction() {
+    		// TODO Auto-generated method stub
+    		return super.getInstruction();
+    	}
     }
     
     public static class DecodeToExecute extends LatchBase {
         // LatchBase already includes a field for the instruction.
         // What else do you need here?
+    	int source1, source2, oper0;
     }
     
     public static class ExecuteToMemory extends LatchBase {
         // LatchBase already includes a field for the instruction.
         // What do you need here?
+    	int finalResult;
     }
 
     public static class MemoryToWriteback extends LatchBase {
         // LatchBase already includes a field for the instruction.
-        // What do you need here?
+        // What do you need here?    	
+    	int finalResult;
     }    
 }
